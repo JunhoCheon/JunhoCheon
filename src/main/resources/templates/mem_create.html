@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input ,select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+    
+}
+
+	</style>
+    <title>Create Member</title>
+</head>
+<body>
+    <h2>Create New Member</h2>
+    
+    <form action="/mem/memcreate" method="post">
+        <!-- 이름 입력 -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <!-- 이메일 입력 -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <!-- 부서명 입력 -->
+        <label for="deptname">Department Name:</label>
+        <select type="text" id="deptname" name="deptname" required><br>
+			<option value="인사팀">인사팀</option>
+			<option value="생산팀">생산팀</option>
+			<option value="회계팀">회계팀</option>
+			<option value="영업팀">영업팀</option>
+			<option value="구매팀">구매팀</option>
+        <!-- 직책 입력 -->
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required><br>
+
+        <!-- 시작일 입력 -->
+        <label for="startdate">Start Date:</label>
+        <input type="date" id="startdate" name="startdate" required><br>
+
+        <!-- 은행 계좌 번호 입력 -->
+        <label for="banknum">Bank Number:</label>
+        <input type="number" id="banknum" name="banknum" required><br>
+
+        <!-- 정규 급여 입력 -->
+        <label for="regualpay">Regular Pay:</label>
+        <input type="number" id="regualpay" name="regualpay" required><br>
+
+        <!-- 직원 ID 입력 -->
+        <label for="employeeId">Employee ID:</label>
+        <input type="number" id="employeeId" name="employeeId" required><br>
+
+        <!-- 제출 버튼 -->
+        <input type="submit" value="Create Member">
+    </form>
+</body>
+</html>
